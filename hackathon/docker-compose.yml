@@ -1,0 +1,13 @@
+services:
+  hacatonius:
+    image: hakatonius
+    build: .
+    container_name: r_hacatonius
+    profiles: ["pc"]
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    environment:
+      - DISPLAY=host.docker.internal:0
+    stdin_open: true
+    tty: true
+    working_dir: /ros2_ws

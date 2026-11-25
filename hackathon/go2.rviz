@@ -1,0 +1,74 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Time
+    Name: Time
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Plane Cell Count: 20
+      Cell Size: 1
+      Reference Frame: <Fixed Frame>
+      Plane: XY
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Marker Scale: 0.5
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Go2 Lidar (utlidar/cloud)
+      Enabled: true
+      Topic:
+        Value: /utlidar/cloud
+        Reliability Policy: Best Effort
+      Size (Pixels): 3
+      Size (m): 0.03
+      Style: Points
+      Color Transformer: Intensity
+      Channel Name: intensity
+      Min Intensity: 0
+      Max Intensity: 255
+    - Class: rviz_default_plugins/Odometry
+      Name: Go2 Odometry (utlidar/robot_odom)
+      Enabled: true
+      Topic:
+        Value: /utlidar/robot_odom
+        Reliability Policy: Best Effort
+      Keep: 1000
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+      Shape: Arrow
+      Color: {r: 0, g: 255, b: 0, a: 255}
+    - Class: rviz_default_plugins/Pose
+      Name: Go2 Pose (utlidar/robot_pose)
+      Enabled: true
+      Topic:
+        Value: /utlidar/robot_pose
+        Reliability Policy: Best Effort
+      Axes Length: 0.3
+      Axes Radius: 0.02
+    - Class: rviz_default_plugins/Map
+      Name: Map (utlidar/slam)
+      Enabled: true
+      Topic:
+        Value: /utlidar/slam_map
+        Reliability Policy: Best Effort
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+    Use Sim Time: true
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Value: true
+Window Geometry:
+  Height: 1000
+  Width: 1600
