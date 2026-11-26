@@ -1,0 +1,9 @@
+
+*.zip
+*.mcap
+hackathon/ros2_ws/bag_for_mapping/
+hackathon/ros2_ws/bag_for_localization/
+hackathon/ros2_ws/build/
+hackathon/ros2_ws/install/
+hackathon/ros2_ws/log/
+hackathon/ros2_ws/result_bag/
